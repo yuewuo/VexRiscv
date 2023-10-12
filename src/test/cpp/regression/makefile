@@ -43,6 +43,7 @@ REF=no
 TRACE_WITH_TIME=no
 REF_TIME=no
 THREAD_COUNT?=$(shell nproc)
+# THREAD_COUNT?=$(shell sysctl -n hw.logicalcpu)  # for MacOS
 MTIME_INSTR_FACTOR?=no
 COMPRESSED?=no
 SUPERVISOR?=no

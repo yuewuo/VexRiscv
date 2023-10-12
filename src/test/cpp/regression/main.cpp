@@ -1403,7 +1403,7 @@ public:
     		return false;
         }
         virtual void dWrite(int32_t address, int32_t size, uint8_t *data){
-            if(address & (size-1) != 0)
+            if((address & (size-1)) != 0)
             	cout << "Ref did a unaligned write" << endl;
 
     		if(!ws->isPerifRegion(address)){
